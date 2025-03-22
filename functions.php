@@ -1,7 +1,7 @@
 <?php
 
 // Get site version
-$version = wp_get_theme()->get( 'Version' );
+$theme_version = wp_get_theme()->get( 'Version' );
 
 // Remove unused default WordPress fields
 function st_remove_default_fields() {
@@ -15,11 +15,13 @@ add_action( 'init', 'st_remove_default_fields' );
 
 // Load styles
 function st_enqueue_styles() {
+  $theme_version = wp_get_theme()->get( 'Version' );
+
   wp_enqueue_style(
     'st-theme-styles',
     get_template_directory_uri() . '/style.css',
-    [],
-    $version,
+    array(),
+    $theme_version,
     'all'
   );
 }
