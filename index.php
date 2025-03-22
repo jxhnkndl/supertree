@@ -1,1 +1,2 @@
-<h1>SUPERTREE</h1>
+<?php
+// Silence is golden
