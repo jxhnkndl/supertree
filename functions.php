@@ -12,3 +12,16 @@ function st_remove_default_fields() {
 }
 
 add_action( 'init', 'st_remove_default_fields' );
+
+// Load styles
+function st_enqueue_styles() {
+  wp_enqueue_style(
+    'st-theme-styles',
+    get_template_directory_uri() . '/style.css',
+    [],
+    $version,
+    'all'
+  );
+}
+
+add_action( 'wp_enqueue_scripts', 'st_enqueue_styles' );
