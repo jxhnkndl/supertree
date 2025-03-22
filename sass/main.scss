@@ -1,3 +1,125 @@
-@use 'media-queries' as *;
-@use 'typography' as *;
+/* 
+Theme Name: Supertree
+Description: Richmond, Virginia's premiere 90s alternative rock cover band
+Version: 1.0.0
+Tags: alternative, rock, 90s, nineties, grunge, cover band, band
+Author: J.K. Royston
+Author URI: https://www.jkroyston.com
+License: MIT
+*/
+
 @use 'variables' as *;
+@use 'typography' as *;
+@use 'media-queries' as *;
+
+// Resets
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Globals
+
+body {
+  background-color: $dark;
+  color: $light;
+}
+
+h1 {
+  @include text-main-headline;
+}
+
+h2 {
+  @include text-heading;
+}
+
+h3 {
+  @include text-event-date;
+}
+
+h4 {
+  @include text-event-details;
+}
+
+p {
+  @include text-body;
+}
+
+p.small-text-label {
+  @include text-label;
+}
+
+button {
+  @include text-cta-btn;
+  background-color: $primary;
+  color: $dark;
+}
+
+section {
+  position: relative;
+}
+
+.side-padding {
+  padding: 0 2rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $max-width-container;
+}
+
+// Header and navbar
+
+
+
+// Hero section
+.hero-section {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+
+  .hero-section-video-container {
+    height: 100vh;
+    inset: 0;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    z-index: 1;
+
+    @include tablet {
+      height: 80vh;
+    }
+  }
+
+  .hero-section-content-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100vh;
+    inset: 0;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+    @include tablet {
+      height: 80vh;
+    }
+
+    .hero-section-logo-container {
+      width: clamp(23rem, 16.348rem + 29.565vw, 40rem);
+
+      .hero-section-logo-img {
+        width: 100%;
+      }
+    }
+  }
+}
