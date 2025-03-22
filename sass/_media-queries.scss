@@ -1,0 +1,27 @@
+// Phone
+@mixin phone {
+  @media (min-width: $sm) {
+    @content;
+  }
+}
+
+// Tablet
+@mixin tablet {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+
+// Laptop
+@mixin laptop {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin desktop {
+  @media (min-width: $xl) {
+    @content;
+  }
+}
