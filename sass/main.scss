@@ -53,11 +53,25 @@ p.small-text-label {
   @include text-label;
 }
 
-button {
+section {
+  position: relative;
+}
+
+.side-padding {
+  padding: 0 1.5rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $max-width-container;
+}
+
+.btn {
   @include text-cta-btn;
   background-color: $primary;
   border: none;
   color: $dark;
+  text-align: center;
   transition: all 0.25s ease-in-out;
 
   &:hover {
@@ -71,19 +85,6 @@ button {
   @include tablet {
     display: none;
   }
-}
-
-section {
-  position: relative;
-}
-
-.side-padding {
-  padding: 0 1.5rem;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: $max-width-container;
 }
 
 // Header and navbar
@@ -137,7 +138,7 @@ section {
       width: 100%;
 
       @include phone {
-        width: 60%;
+        width: 70%;
       }
     }
   }
