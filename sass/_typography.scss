@@ -1,0 +1,98 @@
+@use 'variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Main headline
+@mixin text-main-headline {
+  color: $light;
+  font-family: $font-accent;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.875rem;
+  @content;
+}
+
+// Section headings
+@mixin text-heading {
+  color: $light;
+  font-family: $font-accent;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  @content;
+}
+
+// Body Text
+@mixin text-body {
+  color: $light;
+  font-family: $font-primary;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+// Text label
+@mixin text-label {
+  color: $light;
+  font-family: $font-primary;
+  font-size: 0.875rem;
+  font-style: normal;
+}
+
+// Navbar heading
+@mixin text-nav-heading {
+  color: $light;
+  font-family: $font-accent;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  @content;
+}
+
+// Navbar links
+@mixin text-nav-link {
+  color: light;
+  font-family: $font-accent;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 400;
+  @content;
+
+  &:hover {
+    opacity: 0.6;
+    @content;
+  }
+}
+
+// CTA button text
+@mixin text-cta-btn {
+  color: $dark;
+  font-family: $font-accent;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  @content;
+}
+
+// Event date
+@mixin text-event-date {
+  font-family: $font-accent;
+  font-size: 2.75rem;
+  font-style: normal;
+  font-weight: 500; 
+  text-transform: uppercase;
+  @content;
+}
+
+// Event details
+@mixin text-event-details {
+  color: $light;
+  font-family: $font-primary;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+}
