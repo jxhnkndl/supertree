@@ -8,7 +8,7 @@ function st_remove_default_fields() {
   remove_post_type_support( 'page', 'editor' );
   remove_post_type_support( 'post', 'editor' );
   remove_post_type_support( 'concert', 'editor' );
-  remove_post_type_support( 'youtube-video', 'editor' );
+  remove_post_type_support( 'video', 'editor' );
 }
 
 add_action( 'init', 'st_remove_default_fields' );
