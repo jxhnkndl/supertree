@@ -1,8 +1,5 @@
 <?php
 
-// Get site version
-$theme_version = wp_get_theme()->get( 'Version' );
-
 // Remove unused default WordPress fields
 function st_remove_default_fields() {
   remove_post_type_support( 'page', 'editor' );
