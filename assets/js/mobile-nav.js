@@ -6,6 +6,8 @@ const navEl = document.querySelector('.nav-mobile');
 const navLinksEl = document.querySelectorAll('.nav-mobile-link-container');
 const navIconEl = document.querySelector('.nav-mobile-footer-icon-container');
 
+gsap.set(navEl, { display: 'none', xPercent: 100 });
+
 // Open or close hamburger menu
 menuContainerEL.addEventListener('click', (e) => {
   const isOpen = JSON.parse(menuContainerEL.getAttribute('aria-expanded'));
@@ -15,13 +17,14 @@ menuContainerEL.addEventListener('click', (e) => {
 
 // Open nav drawer
 const openNav = () => {
-  navEl.style.display = 'flex';
-
   const timeline = gsap.timeline();
 
   timeline
+    .set(navEl, {
+      display: 'flex',
+    })
     .to(navEl, {
-      x: 0,
+      xPercent: 0,
       duration: 0.35,
       ease: 'power1.out',
     })
@@ -70,4 +73,55 @@ const openNav = () => {
 };
 
 // Close nav drawer
-const closeNav = () => {};
+const closeNav = () => {
+  const timeline = gsap.timeline();
+
+  timeline
+    .to(navIconEl, {
+      opacity: 0,
+      duration: 0.15,
+      ease: 'power1.out',
+    })
+    .to(navLinksEl, {
+      opacity: 0,
+      x: '2.5rem',
+      duration: 0.15,
+      stagger: 0.05,
+      ease: 'power1.out',
+    })
+    .to(menuBarBottomEl, {
+      rotation: 0,
+      y: 0,
+      duration: 0.15,
+      ease: 'power1.out',
+    })
+    .to(
+      menuBarTopEl,
+      {
+        width: '32px',
+        y: 0,
+        rotation: 0,
+        duration: 0.15,
+        ease: 'power1.out',
+      },
+      '<'
+    )
+    .to(menuContainerEL, {
+      backgroundColor: '#0B1013',
+      duration: 0.15,
+      ease: 'power1.out',
+    })
+    .to(
+      navEl,
+      {
+        xPercent: 100,
+        duration: 0.15,
+        ease: 'power1.out',
+      },
+      '<'
+    )
+    .set(navEl, {
+      display: 'none',
+      xPercent: 100,
+    });
+};

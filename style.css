@@ -248,14 +248,12 @@ section {
 .nav-mobile {
   background-color: #F17122;
   color: #F5FCFF;
-  display: none;
   flex-direction: column;
   height: 100vh;
   inset: 0;
   justify-content: space-between;
   padding: 2.25rem;
   position: fixed;
-  transform: translateX(100%);
   z-index: 3;
 }
 @media (min-width: 48rem) {
