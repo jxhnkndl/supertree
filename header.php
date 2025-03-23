@@ -11,7 +11,7 @@
     <div class="header-container">
       <div class="header-main-nav">
         <!-- Brand Link -->
-        <a href="#" class="header-logo-link">
+        <a href="#" class="header-logo-link" aria-label="Return to home page">
           <div class="header-logo">
             <img src="<?php echo get_template_directory_uri() . '/assets/images/triple-infinity-orange.svg' ?>" alt="Supertree is a powerhouse 90s alternative rock cover band" class="logo-icon"/>
             Supertree
@@ -40,7 +40,7 @@
     </div>
   </header>
   <!-- Mobile Hamburger Menu Button -->
-  <button class="hamburger-menu">
+  <button class="hamburger-menu" aria-expanded="false">
     <div class="menu-bars">
       <div class="menu-bar menu-bar-top"></div>
       <div class="menu-bar menu-bar-bottom"></div>

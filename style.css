@@ -248,13 +248,14 @@ section {
 .nav-mobile {
   background-color: #F17122;
   color: #F5FCFF;
-  display: flex;
+  display: none;
   flex-direction: column;
   height: 100vh;
   inset: 0;
   justify-content: space-between;
   padding: 2.25rem;
   position: fixed;
+  transform: translateX(100%);
   z-index: 3;
 }
 @media (min-width: 48rem) {
@@ -266,7 +267,11 @@ section {
   list-style: none;
   margin-top: 6.25rem;
 }
-.nav-mobile .nav-mobile-links .nav-mobile-link {
+.nav-mobile .nav-mobile-links .nav-mobile-link-container {
+  opacity: 0;
+  transform: translateX(2.5rem);
+}
+.nav-mobile .nav-mobile-links .nav-mobile-link-container .nav-mobile-link {
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
   font-style: normal;
@@ -277,13 +282,14 @@ section {
   text-transform: uppercase;
   display: block;
 }
-.nav-mobile .nav-mobile-links .nav-mobile-link-divider {
+.nav-mobile .nav-mobile-links .nav-mobile-link-container .nav-mobile-link-divider {
   background-color: #F5FCFF;
   height: 1px;
   margin: 1rem 0;
   width: 14.5rem;
 }
 .nav-mobile .nav-mobile-footer-icon-container {
+  opacity: 0;
   width: 6.25rem;
 }
 .nav-mobile .nav-mobile-footer-icon-container .nav-footer-icon {
