@@ -89,7 +89,33 @@ section {
 
 // Header and navbar
 
+.header {
+  background-color: $dark;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
 
+  .header-container {
+    align-items: center;
+    display: flex;
+    height: 5rem;
+    justify-content: space-between;
+    width: 100%;
+
+    .header-logo {
+      @include text-nav-heading;
+      align-items: center;
+      display: flex;
+      gap: 0.5rem;
+
+      .logo-icon {
+        width: 2.75rem;
+      }
+    }
+  }
+}
 
 // Hero section
 .hero-section {

@@ -108,6 +108,36 @@ section {
   }
 }
 
+.header {
+  background-color: #0B1013;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+.header .header-container {
+  align-items: center;
+  display: flex;
+  height: 5rem;
+  justify-content: space-between;
+  width: 100%;
+}
+.header .header-container .header-logo {
+  color: #F5FCFF;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+.header .header-container .header-logo .logo-icon {
+  width: 2.75rem;
+}
+
 .hero-section {
   align-items: center;
   display: flex;
