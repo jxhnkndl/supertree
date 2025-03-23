@@ -37,5 +37,16 @@
       </div>
       <!-- Desktop Header CTA Button -->
       <a href="#contact" class="header-cta-btn">Book Now</a>
+      <!-- Mobile Hamburger Menu Button -->
+      <button class="hamburger-menu">
+        <div class="menu-bars">
+          <div class="menu-bar menu-bar-top"></div>
+          <div class="menu-bar menu-bar-bottom"></div>
+        </div>
+      </button>
     </div>
   </header>
+  <!-- Mobile Nav Drawer -->
+  <!-- <nav class="nav-mobile">
+
+  </nav> -->

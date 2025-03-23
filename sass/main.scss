@@ -192,6 +192,60 @@ section {
 	}
 }
 
+// Hamburger menu container and icon
+.hamburger-menu {
+	align-items: center;
+	background-color: $dark;
+	border: none;
+	display: flex;
+	height: 100%;
+	gap: 1rem;
+	justify-content: center;
+	padding: 1.5rem;
+
+	@include tablet {
+		display: none;
+	}
+
+	.menu-bars {
+		align-items: flex-end;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		justify-content: space-between;
+		
+		.menu-bar {
+			background-color: $light;
+			height: 2px;
+		}
+
+		.menu-bar-top {
+			width: 30px;
+		}
+
+		.menu-bar-bottom {
+			width: 36px;
+		}
+	}
+}
+
+// Mobile nav container/drawer
+.nav-mobile {
+	background-color: $primary;
+	color: $light;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	inset: 0;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 3;
+
+	@include tablet {
+		display: none;
+	}
+}
+
 // Hero section
 .hero-section {
 	align-items: center;

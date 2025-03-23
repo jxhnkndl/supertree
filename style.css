@@ -206,6 +206,56 @@ section {
   background-color: rgba(241, 113, 34, 0.8196078431);
 }
 
+.hamburger-menu {
+  align-items: center;
+  background-color: #0B1013;
+  border: none;
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1.5rem;
+}
+@media (min-width: 48rem) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+.hamburger-menu .menu-bars {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.hamburger-menu .menu-bars .menu-bar {
+  background-color: #F5FCFF;
+  height: 2px;
+}
+.hamburger-menu .menu-bars .menu-bar-top {
+  width: 30px;
+}
+.hamburger-menu .menu-bars .menu-bar-bottom {
+  width: 36px;
+}
+
+.nav-mobile {
+  background-color: #F17122;
+  color: #F5FCFF;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  inset: 0;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 3;
+}
+@media (min-width: 48rem) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
 .hero-section {
   align-items: center;
   display: flex;
