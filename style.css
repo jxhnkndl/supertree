@@ -248,8 +248,8 @@ section {
 .nav-mobile {
   background-color: #F17122;
   color: #F5FCFF;
+  display: none;
   flex-direction: column;
-  height: 100vh;
   inset: 0;
   justify-content: space-between;
   padding: 2.25rem;
@@ -258,7 +258,7 @@ section {
 }
 @media (min-width: 48rem) {
   .nav-mobile {
-    display: none;
+    display: none !important;
   }
 }
 .nav-mobile .nav-mobile-links {
@@ -284,7 +284,7 @@ section {
   background-color: #F5FCFF;
   height: 1px;
   margin: 1rem 0;
-  width: 14.5rem;
+  width: clamp(14.5rem, 4.353rem + 45.098vw, 26rem);
 }
 .nav-mobile .nav-mobile-footer-icon-container {
   opacity: 0;
@@ -340,7 +340,7 @@ section {
 }
 @media (min-width: 30rem) {
   .hero-section .hero-section-content-container .cta-btn-mobile {
-    width: 70%;
+    width: 80%;
   }
 }
 

@@ -239,8 +239,8 @@ section {
 .nav-mobile {
 	background-color: $primary;
 	color: $light;
+	display: none;
 	flex-direction: column;
-	height: 100vh;
 	inset: 0;
 	justify-content: space-between;
 	padding: 2.25rem;
@@ -248,7 +248,7 @@ section {
 	z-index: 3;
 
 	@include tablet {
-		display: none;
+		display: none !important;
 	}
 
 	.nav-mobile-links {
@@ -273,10 +273,9 @@ section {
 				background-color: $light;
 				height: 1px;
 				margin: 1rem 0;
-				width: 14.5rem;
+				width: clamp(14.5rem, 4.353rem + 45.098vw, 26rem);
 			}
 		}
-
 	}
 
 	.nav-mobile-footer-icon-container	{
@@ -337,7 +336,7 @@ section {
 		width: 100%;
 
 		@include phone {
-			width: 70%;
+			width: 80%;
 		}
 		}
 	}

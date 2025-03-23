@@ -33,6 +33,8 @@ add_action( 'wp_enqueue_scripts', 'st_enqueue_styles' );
 
 // Load scripts
 function st_enqueue_scripts() {
+  $theme_version = wp_get_theme()->get( 'Version' );
+
   wp_enqueue_script(
     'st-gsap-animation',
     'https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js',
@@ -53,7 +55,7 @@ function st_enqueue_scripts() {
     'dc-mobile-nav',
     get_template_directory_uri() . '/assets/js/mobile-nav.js',
     array(),
-    $version,
+    $theme_version,
     true
   );
 }

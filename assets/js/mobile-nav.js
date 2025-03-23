@@ -6,8 +6,6 @@ const navEl = document.querySelector('.nav-mobile');
 const navLinksEl = document.querySelectorAll('.nav-mobile-link-container');
 const navIconEl = document.querySelector('.nav-mobile-footer-icon-container');
 
-gsap.set(navEl, { display: 'none', xPercent: 100 });
-
 // Open or close hamburger menu
 menuContainerEL.addEventListener('click', (e) => {
   const isOpen = JSON.parse(menuContainerEL.getAttribute('aria-expanded'));
@@ -17,12 +15,11 @@ menuContainerEL.addEventListener('click', (e) => {
 
 // Open nav drawer
 const openNav = () => {
+  navEl.style.display = 'flex';
+
   const timeline = gsap.timeline();
 
   timeline
-    .set(navEl, {
-      display: 'flex',
-    })
     .to(navEl, {
       xPercent: 0,
       duration: 0.35,
@@ -119,9 +116,7 @@ const closeNav = () => {
         ease: 'power1.out',
       },
       '<'
-    )
-    .set(navEl, {
-      display: 'none',
-      xPercent: 100,
-    });
+    );
+
+  setTimeout(() => { navEl.style.display = 'none' }, 1000);
 };
