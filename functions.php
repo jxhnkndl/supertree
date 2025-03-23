@@ -48,6 +48,14 @@ function st_enqueue_scripts() {
     '3.12.7',
     true
   );
+
+  wp_enqueue_script(
+    'dc-mobile-nav',
+    get_template_directory_uri() . '/assets/js/mobile-nav.js',
+    array(),
+    $version,
+    true
+  );
 }
 
 add_action( 'wp_enqueue_scripts', 'st_enqueue_scripts' );
