@@ -3,6 +3,7 @@
 // Remove admin bar from site preview
 add_filter( 'show_admin_bar', '__return_false' );
 
+
 // Remove unused default WordPress fields
 function st_remove_default_fields() {
   remove_post_type_support( 'page', 'editor' );
@@ -12,6 +13,7 @@ function st_remove_default_fields() {
 }
 
 add_action( 'init', 'st_remove_default_fields' );
+
 
 // Load styles
 function st_enqueue_styles() {
@@ -27,3 +29,25 @@ function st_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'st_enqueue_styles' );
+
+
+// Load scripts
+function st_enqueue_scripts() {
+  wp_enqueue_script(
+    'st-gsap-animation',
+    'https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js',
+    array(),
+    '3.12.5',
+    true
+  );
+
+  wp_enqueue_script(
+    'st-gsap-animation-scrolltrigger',
+    'https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js',
+    array(),
+    '3.12.5',
+    true
+  );
+}
+
+add_action( 'wp_enqueue_scripts', 'st_enqueue_scripts' );
