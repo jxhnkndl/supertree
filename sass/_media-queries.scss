@@ -1,27 +1,27 @@
 // Phone
 @mixin phone {
-  @media (min-width: 30rem) {
-    @content;
-  }
+	@media (min-width: 30rem) {
+		@content;
+	}
 }
 
 // Tablet
 @mixin tablet {
-  @media (min-width: 48rem) {
-    @content;
-  }
+	@media (min-width: 48rem) {
+		@content;
+	}
 }
 
 // Laptop
 @mixin laptop {
-  @media (min-width: 64rem) {
-    @content;
-  }
+	@media (min-width: 64rem) {
+		@content;
+	}
 }
 
 // Desktop
 @mixin laptop {
-  @media (min-width: 80rem) {
-    @content;
-  }
+	@media (min-width: 80rem) {
+		@content;
+	}
 }

@@ -4,94 +4,88 @@
 
 // Main headline
 @mixin text-main-headline {
-  color: $light;
-  font-family: $font-accent;
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 3.875rem;
-  @content;
+	color: $light;
+	font-family: $font-accent;
+	font-size: 3rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 3.875rem;
+	@content;
 }
 
 // Section headings
 @mixin text-heading {
-  color: $light;
-  font-family: $font-accent;
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 500;
-  @content;
+	color: $light;
+	font-family: $font-accent;
+	font-size: 3rem;
+	font-style: normal;
+	font-weight: 500;
+	@content;
 }
 
 // Body Text
 @mixin text-body {
-  color: $light;
-  font-family: $font-primary;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2rem;
+	color: $light;
+	font-family: $font-primary;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2rem;
 }
 
 // Text label
 @mixin text-label {
-  color: $light;
-  font-family: $font-primary;
-  font-size: 0.875rem;
-  font-style: normal;
+	color: $light;
+	font-family: $font-primary;
+	font-size: 0.875rem;
+	font-style: normal;
 }
 
 // Navbar heading
 @mixin text-nav-heading {
-  color: $light;
-  font-family: $font-accent;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 500;
-  text-transform: uppercase;
-  @content;
+	color: $light;
+	font-family: $font-accent;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 500;
+	text-transform: uppercase;
+	@content;
 }
 
 // Navbar links
 @mixin text-nav-link-desktop {
-  color: light;
-  font-family: $font-accent;
-  font-style: normal;
-  font-weight: 400;
-  @content;
-
-  &:hover {
-    opacity: 0.6;
-    @content;
-  }
+	font-family: $font-accent;
+	font-style: normal;
+	font-weight: 400;
+	@content;
 }
 
 // CTA button text
 @mixin text-btn {
-  color: $dark;
-  font-family: $font-accent;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 700;
-  text-transform: uppercase;
-  @content;
+	color: $dark;
+	font-family: $font-accent;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 700;
+	text-transform: uppercase;
+	@content;
 }
 
 // Event date
 @mixin text-event-date {
-  font-family: $font-accent;
-  font-size: 2.75rem;
-  font-style: normal;
-  font-weight: 500; 
-  text-transform: uppercase;
-  @content;
+	font-family: $font-accent;
+	font-size: 2.75rem;
+	font-style: normal;
+	font-weight: 500;
+	text-transform: uppercase;
+	@content;
 }
 
 // Event details
 @mixin text-event-details {
-  color: $light;
-  font-family: $font-primary;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
+	color: $light;
+	font-family: $font-primary;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 400;
 }
