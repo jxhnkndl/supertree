@@ -1,5 +1,8 @@
 <?php
 
+// Remove admin bar from site preview
+add_filter( 'show_admin_bar', '__return_false' );
+
 // Remove unused default WordPress fields
 function st_remove_default_fields() {
   remove_post_type_support( 'page', 'editor' );
