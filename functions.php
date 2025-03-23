@@ -37,7 +37,7 @@ function st_enqueue_scripts() {
     'st-gsap-animation',
     'https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js',
     array(),
-    '3.12.5',
+    '3.12.7',
     true
   );
 
@@ -45,7 +45,7 @@ function st_enqueue_scripts() {
     'st-gsap-animation-scrolltrigger',
     'https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js',
     array(),
-    '3.12.5',
+    '3.12.7',
     true
   );
 }
