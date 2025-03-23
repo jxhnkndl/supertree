@@ -37,16 +37,43 @@
       </div>
       <!-- Desktop Header CTA Button -->
       <a href="#contact" class="header-cta-btn">Book Now</a>
-      <!-- Mobile Hamburger Menu Button -->
-      <button class="hamburger-menu">
-        <div class="menu-bars">
-          <div class="menu-bar menu-bar-top"></div>
-          <div class="menu-bar menu-bar-bottom"></div>
-        </div>
-      </button>
     </div>
   </header>
+  <!-- Mobile Hamburger Menu Button -->
+  <button class="hamburger-menu">
+    <div class="menu-bars">
+      <div class="menu-bar menu-bar-top"></div>
+      <div class="menu-bar menu-bar-bottom"></div>
+    </div>
+  </button>
   <!-- Mobile Nav Drawer -->
-  <!-- <nav class="nav-mobile">
-
-  </nav> -->
+  <nav class="nav-mobile">
+    <ul class="nav-mobile-links">
+      <li class="nav-mobile-link-container">
+        <a href="#media" class="nav-mobile-link">Media</a>
+        <div class="nav-mobile-link-divider"></div>
+      </li>
+      <li class="nav-mobile-link-container">
+        <a href="#about" class="nav-mobile-link">About</a>
+        <div class="nav-mobile-link-divider"></div>
+      </li>
+      <li class="nav-mobile-link-container">
+        <a href="#concerts" class="nav-mobile-link">Concerts</a>
+        <div class="nav-mobile-link-divider"></div>
+      </li>
+      <li class="nav-mobile-link-container">
+        <a href="#contact" class="nav-mobile-link">Contact</a>
+        <div class="nav-mobile-link-divider"></div>
+      </li>
+      <li class="nav-mobile-link-container">
+        <a href="#contact" class="nav-mobile-link">YouTube</a>
+        <div class="nav-mobile-link-divider"></div>
+      </li>
+      <li class="nav-mobile-link-container">
+        <a href="#contact" class="nav-mobile-link">Instagram</a>
+      </li>
+    </ul>
+    <div class="nav-mobile-footer-icon-container">
+      <img src="<?php echo get_template_directory_uri() . '/assets/images/triple-infinity-white.svg' ?>" alt="Triple infinity" class="nav-footer-icon">
+    </div>
+  </nav>
