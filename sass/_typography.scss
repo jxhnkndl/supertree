@@ -53,11 +53,10 @@
 }
 
 // Navbar links
-@mixin text-nav-link {
+@mixin text-nav-link-desktop {
   color: light;
   font-family: $font-accent;
   font-style: normal;
-  text-decoration: none;
   font-weight: 400;
   @content;
 
@@ -68,7 +67,7 @@
 }
 
 // CTA button text
-@mixin text-cta-btn {
+@mixin text-btn {
   color: $dark;
   font-family: $font-accent;
   font-size: 1.125rem;
