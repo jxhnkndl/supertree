@@ -21,8 +21,9 @@ const openNav = () => {
 
   timeline
     .to(navEl, {
-      xPercent: 0,
-      duration: 0.35,
+      yPercent: 0,
+      opacity: 1,
+      duration: 0.25,
       ease: 'power1.out',
     })
     .to(
@@ -111,8 +112,9 @@ const closeNav = () => {
     .to(
       navEl,
       {
-        xPercent: 100,
-        duration: 0.15,
+        yPercent: 100,
+        opacity: 0,
+        duration: 0.5,
         ease: 'power1.out',
       },
       '<'
