@@ -20,7 +20,7 @@
 }
 
 // Desktop
-@mixin laptop {
+@mixin desktop {
 	@media (min-width: 80rem) {
 		@content;
 	}
