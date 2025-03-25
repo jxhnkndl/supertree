@@ -54,8 +54,22 @@ p.small-text-label {
 }
 
 section {
-	padding: 6.25rem 0;
+	padding: clamp(3.75rem, 2.772rem + 4.348vw, 6.25rem) 0;
 	position: relative;
+}
+
+.section-heading-container {
+	align-items: center;
+	display: flex;
+	gap: 1rem;
+
+	.section-heading-icon {
+		width: clamp(3rem, 2.511rem + 2.174vw, 4.25rem);
+	}
+
+	.section-heading {
+		@include text-heading;
+	}
 }
 
 .side-padding {
@@ -383,4 +397,9 @@ section {
 			max-width: 50rem;
 		}
 	}
+}
+
+// Media section container
+.media-section {
+	background-color: $section-bg;
 }

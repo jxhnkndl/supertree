@@ -34,9 +34,10 @@ h1 {
 h2 {
   color: #F5FCFF;
   font-family: "Raleway", sans-serif;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 1.109rem + 1.739vw, 2.5rem);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -72,8 +73,25 @@ p.small-text-label {
 }
 
 section {
-  padding: 6.25rem 0;
+  padding: clamp(3.75rem, 2.772rem + 4.348vw, 6.25rem) 0;
   position: relative;
+}
+
+.section-heading-container {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+.section-heading-container .section-heading-icon {
+  width: clamp(3rem, 2.511rem + 2.174vw, 4.25rem);
+}
+.section-heading-container .section-heading {
+  color: #F5FCFF;
+  font-family: "Raleway", sans-serif;
+  font-size: clamp(1.5rem, 1.109rem + 1.739vw, 2.5rem);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .side-padding {
@@ -391,6 +409,10 @@ section {
   .headline-container .headline {
     max-width: 50rem;
   }
+}
+
+.media-section {
+  background-color: rgba(157, 220, 248, 0.1019607843);
 }
 
 /*# sourceMappingURL=style.css.map */

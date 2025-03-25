@@ -27,7 +27,6 @@
       <a class="btn cta-btn-mobile">Book Now</a>
     </div>
   </section>
-
   <!-- Headline Section -->
   <section class="headline-section">
     <div class="side-padding">
@@ -36,6 +35,19 @@
           <img src="<?php echo get_template_directory_uri() . '/assets/images/triple-infinity-orange.svg' ?>" alt="Triple infinity symbol" class="headline-icon">
         </div>
         <h1 class="headline"><?php echo esc_html( $main_headline ); ?></h1>
+      </div>
+    </div>
+  </section>
+  <!-- Media Section -->
+  <section class="media-section">
+    <div class="side-padding">
+      <div class="container media-container">
+        <div class="section-heading-container">
+          <img src="<?php echo get_template_directory_uri() . '/assets/images/triple-infinity-blue.svg' ?>" alt="Triple infinity symbol" class="section-heading-icon">
+          <h2 class="section-heading">
+            <?php echo esc_html( $media_heading ); ?>
+          </h2>
+        </div>
       </div>
     </div>
   </section>
