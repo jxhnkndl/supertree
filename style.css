@@ -81,6 +81,7 @@ section {
   align-items: center;
   display: flex;
   gap: 1rem;
+  margin-bottom: clamp(2.5rem, 1.913rem + 2.609vw, 4rem);
 }
 .section-heading-container .section-heading-icon {
   width: clamp(3rem, 2.511rem + 2.174vw, 4.25rem);
@@ -413,6 +414,15 @@ section {
 
 .media-section {
   background-color: rgba(157, 220, 248, 0.1019607843);
+}
+.media-section .media-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+.media-section .media-container iframe {
+  aspect-ratio: 16/9;
+  width: clamp(21.25rem, 14.28rem + 30.978vw, 39.063rem);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,6 +12,20 @@
   $contact_body = get_field( 'contact_section_body' );
   $instagram_url = get_field( 'instagram_profile_url' );
   $youtube_url = get_field( 'youtube_page_url');
+
+  $videos_args = array(
+    'post_type' => 'video',
+    'order' => 'ASC'
+  );
+
+  $videos_query = new WP_Query( $videos_args );
+
+  $concerts_args = array(
+    'post_type' => 'concert',
+    'order' => 'ASC'
+  );
+
+  $concerts_query = new WP_Query( $concerts_args );
 ?>
 
 <main>
@@ -41,12 +55,28 @@
   <!-- Media Section -->
   <section class="media-section">
     <div class="side-padding">
-      <div class="container media-container">
+      <div class="container">
         <div class="section-heading-container">
           <img src="<?php echo get_template_directory_uri() . '/assets/images/triple-infinity-blue.svg' ?>" alt="Triple infinity symbol" class="section-heading-icon">
           <h2 class="section-heading">
             <?php echo esc_html( $media_heading ); ?>
           </h2>
+        </div>
+        <div class="media-container">
+          <?php 
+            if ( $videos_query->have_posts() ) :
+              while ( $videos_query->have_posts() ) : $videos_query->the_post();
+                $youtube_url = get_field( 'youtube_url' );
+                $song_title = get_field( 'song_title' );
+                $artist = get_field( 'artist' );
+
+                // Create container and embed YouTube video
+                echo '<a href="' . $youtube_url . '" target="_blank" class="video-container-link">';
+                echo '<iframe src="' . $youtube_url . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+                echo '</a>';
+              endwhile;
+            endif;
+          ?>
         </div>
       </div>
     </div>
