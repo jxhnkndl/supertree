@@ -24,10 +24,11 @@ body {
 h1 {
   color: #F5FCFF;
   font-family: "Raleway", sans-serif;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 0.913rem + 2.609vw, 3rem);
   font-style: normal;
-  font-weight: 600;
-  line-height: 3.875rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: clamp(2rem, 1.266rem + 3.261vw, 3.875rem);
 }
 
 h2 {
@@ -71,11 +72,12 @@ p.small-text-label {
 }
 
 section {
+  padding: 6.25rem 0;
   position: relative;
 }
 
 .side-padding {
-  padding: 0 1.5rem;
+  padding: 0 clamp(1rem, 0.804rem + 0.87vw, 1.5rem);
 }
 
 .container {
@@ -303,6 +305,11 @@ section {
   justify-content: center;
   position: relative;
 }
+@media (min-width: 48rem) {
+  .hero-section {
+    height: 90vh;
+  }
+}
 .hero-section .hero-section-video-container {
   height: 100vh;
   inset: 0;
@@ -342,6 +349,47 @@ section {
 @media (min-width: 30rem) {
   .hero-section .hero-section-content-container .cta-btn-mobile {
     width: 80%;
+  }
+}
+
+.headline-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 1.109rem + 1.739vw, 2.5rem);
+  justify-content: center;
+}
+.headline-container .headline-icon-container {
+  width: clamp(5rem, 4.413rem + 2.609vw, 6.5rem);
+}
+.headline-container .headline-icon-container .headline-icon {
+  object-fit: contain;
+  width: 100%;
+}
+.headline-container .headline {
+  color: #F5FCFF;
+  font-family: "Raleway", sans-serif;
+  font-size: clamp(1.5rem, 0.913rem + 2.609vw, 3rem);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: clamp(2rem, 1.266rem + 3.261vw, 3.875rem);
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 30rem) {
+  .headline-container .headline {
+    max-width: 80%;
+  }
+}
+@media (min-width: 48rem) {
+  .headline-container .headline {
+    max-width: 36rem;
+  }
+}
+@media (min-width: 64rem) {
+  .headline-container .headline {
+    max-width: 50rem;
   }
 }
 

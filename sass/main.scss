@@ -54,11 +54,12 @@ p.small-text-label {
 }
 
 section {
+	padding: 6.25rem 0;
 	position: relative;
 }
 
 .side-padding {
-	padding: 0 1.5rem;
+	padding: 0 clamp(1rem, 0.804rem + 0.87vw, 1.5rem);
 }
 
 .container {
@@ -298,6 +299,10 @@ section {
 	justify-content: center;
 	position: relative;
 
+	@include tablet {
+		height: 90vh;
+	}
+
 	.hero-section-video-container {
 		height: 100vh;
 		inset: 0;
@@ -307,7 +312,7 @@ section {
 		z-index: 1;
 
 		@include tablet {
-		height: 90vh;
+			height: 90vh;
 		}
 	}
 
@@ -339,6 +344,43 @@ section {
 			@include phone {
 				width: 80%;
 			}
+		}
+	}
+}
+
+// Main headline 
+.headline-container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: clamp(1.5rem, 1.109rem + 1.739vw, 2.5rem);
+	justify-content: center;
+	
+	.headline-icon-container {
+		width: clamp(5rem, 4.413rem + 2.609vw, 6.5rem);
+	
+		.headline-icon {
+			object-fit: contain;
+			width: 100%;
+		}
+	}
+
+	.headline {
+		@include text-main-headline {
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		@include phone {
+			max-width: 80%;
+		}
+
+		@include tablet {
+			max-width: 36rem;
+		}
+		
+		@include laptop {
+			max-width: 50rem;
 		}
 	}
 }
