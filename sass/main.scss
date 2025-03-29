@@ -405,13 +405,38 @@ section {
 	background-color: $section-bg;
 
 	.media-container {
-		display: flex;
-		gap: 1.5rem;
 		overflow: hidden;
 
-		iframe {
-			aspect-ratio: 16 / 9;
-			width: clamp(21.25rem, 14.28rem + 30.978vw, 39.063rem);
+		.media-scroll-container {
+			display: flex;
+			gap: 1.5rem;
+
+			iframe {
+				aspect-ratio: 16 / 9;
+				width: clamp(21.25rem, 14.28rem + 30.978vw, 39.063rem);
+			}
 		}
+	}
+}
+
+
+
+// Footer
+footer {
+	padding: 8rem 0 4rem 0;
+}
+
+.footer-content {
+	p {
+		@include text-label;
+
+		&:last-of-type {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.social-icons-container {
+		display: flex;
+		gap: 1rem;
 	}
 }

@@ -70,6 +70,7 @@ p.small-text-label {
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   font-style: normal;
+  line-height: 1.5rem;
 }
 
 section {
@@ -416,13 +417,34 @@ section {
   background-color: rgba(157, 220, 248, 0.1019607843);
 }
 .media-section .media-container {
-  display: flex;
-  gap: 1.5rem;
   overflow: hidden;
 }
-.media-section .media-container iframe {
+.media-section .media-container .media-scroll-container {
+  display: flex;
+  gap: 1.5rem;
+}
+.media-section .media-container .media-scroll-container iframe {
   aspect-ratio: 16/9;
   width: clamp(21.25rem, 14.28rem + 30.978vw, 39.063rem);
+}
+
+footer {
+  padding: 8rem 0 4rem 0;
+}
+
+.footer-content p {
+  color: #F5FCFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.5rem;
+}
+.footer-content p:last-of-type {
+  margin-bottom: 1.5rem;
+}
+.footer-content .social-icons-container {
+  display: flex;
+  gap: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
