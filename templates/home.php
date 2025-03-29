@@ -63,20 +63,22 @@
           </h2>
         </div>
         <div class="media-container">
-          <?php 
-            if ( $videos_query->have_posts() ) :
-              while ( $videos_query->have_posts() ) : $videos_query->the_post();
-                $youtube_url = get_field( 'youtube_url' );
-                $song_title = get_field( 'song_title' );
-                $artist = get_field( 'artist' );
+          <div class="media-scroll-container">
+            <?php 
+              if ( $videos_query->have_posts() ) :
+                while ( $videos_query->have_posts() ) : $videos_query->the_post();
+                  $youtube_url = get_field( 'youtube_url' );
+                  $song_title = get_field( 'song_title' );
+                  $artist = get_field( 'artist' );
 
-                // Create container and embed YouTube video
-                echo '<a href="' . $youtube_url . '" target="_blank" class="video-container-link">';
-                echo '<iframe src="' . $youtube_url . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
-                echo '</a>';
-              endwhile;
-            endif;
-          ?>
+                  // Create container and embed YouTube video
+                  echo '<a href="' . $youtube_url . '" target="_blank" class="video-container-link">';
+                  echo '<iframe src="' . $youtube_url . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+                  echo '</a>';
+                endwhile;
+              endif;
+            ?>
+          </div>
         </div>
       </div>
     </div>
