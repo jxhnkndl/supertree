@@ -42,6 +42,7 @@
 	font-size: 0.875rem;
 	font-style: normal;
 	line-height: 1.5rem;
+	@content;
 }
 
 // Navbar heading
