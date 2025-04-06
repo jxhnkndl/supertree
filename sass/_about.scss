@@ -1,0 +1,8 @@
+@use 'colors' as *;
+@use 'media-queries' as *;
+@use 'typography' as *;
+
+// Biography text
+.biography p {
+    margin-bottom: 1.5rem;
+}

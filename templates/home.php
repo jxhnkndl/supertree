@@ -84,6 +84,20 @@ $concerts_query = new WP_Query( $concerts_args );
             </div>
         </div>
     </section>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="side-padding">
+            <div class="container about-container">
+                <div class="section-heading-container">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/triple-infinity-orange.svg' ?>" alt="Triple infinity symbol">
+                    <h2><?php echo $about_heading ?></h2>
+                </div>
+                <div class="biography">
+                    <?php echo $biography; ?>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
