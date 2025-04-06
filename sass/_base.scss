@@ -1,0 +1,93 @@
+@use 'colors' as *;
+@use 'media-queries' as *;
+@use 'typography' as *;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $dark;
+    color: $light;
+}
+
+h1 {
+    @include text-main-headline;
+}
+
+h2 {
+    @include text-heading;
+}
+
+h3 {
+    @include text-event-date;
+}
+
+h4 {
+    @include text-event-details;
+}
+
+p {
+    @include text-body;
+}
+
+p.small-text-label {
+    @include text-label;
+}
+
+section {
+    padding: clamp(3.75rem, 2.772rem + 4.348vw, 6.25rem) 0;
+    position: relative;
+}
+
+.side-padding {
+    padding: 0 clamp(1rem, 0.804rem + 0.87vw, 1.5rem);
+}
+
+// Max-width container
+.container {
+    margin: 0 auto;
+    max-width: 85.5rem;
+}
+
+// Section headings with triple infinity icon
+.section-heading-container {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: clamp(2.5rem, 1.9rem + 2vw, 3.5rem);
+
+    .section-heading-icon {
+        width: clamp(3rem, 2.511rem + 2.174vw, 4.25rem);
+    }
+
+    .section-heading {
+        @include text-heading;
+    }
+}
+
+// General button styles
+.btn {
+    @include text-btn;
+    background-color: $primary;
+    border: none;
+    color: $dark;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &:active {
+        transform: scale(0.99);
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
