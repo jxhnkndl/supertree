@@ -1,0 +1,208 @@
+@use 'colors' as *;
+@use 'media-queries' as *;
+@use 'typography' as *;
+
+// Main header containers
+.header {
+    align-items: center;
+    background-color: $dark;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+
+    .header-container {
+        align-items: center;
+        display: flex;
+        height: 5rem;
+        justify-content: space-between;
+        width: 100%;
+
+        .header-main-nav {
+            align-items: center;
+            display: flex;
+        }
+    }
+}
+
+// Branding
+.header-logo-link {
+    @include text-nav-heading;
+    
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 2rem 0 1.5rem;
+
+    img {
+        width: 2.75rem;
+    }
+}
+
+// Desktop nav
+.desktop-nav {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+
+    // Links container
+    ul {
+        align-items: center;
+        display: flex;
+        list-style: none;
+
+        // Links
+        li a {
+            @include text-nav-link-desktop {
+                color: $light;
+                text-decoration: none;
+            }
+    
+            align-items: center;
+            display: flex;
+            height: 5rem;
+            justify-content: center;
+            padding: 0 1.25rem;
+            transition: all 0.1s ease-in-out;
+    
+            &:hover {
+                background-color: $section-bg;
+                color: $primary;
+            }
+        }
+    }
+}
+
+// Desktop header "Book Now" CTA button
+.header-cta-btn {
+    @include text-nav-link-desktop {
+        color: $dark;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    background-color: $primary;
+    display: none;
+    height: 100%;
+    padding: 0 2.5rem;
+    transition: all 0.1s ease-in-out;
+
+    @include tablet {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &:hover {
+        background-color: $primary-dark;
+    }
+}
+
+// Hamburger menu container and icon
+.hamburger-menu {
+    align-items: center;
+    background-color: $dark;
+    border: none;
+    display: flex;
+    height: 5rem;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1.5rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5;
+
+    @include tablet {
+        display: none;
+    }
+
+    .menu-bars {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: space-between;
+
+        .menu-bar {
+            background-color: $light;
+            height: 2px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .menu-bar-top {
+            width: 30px;
+        }
+
+        .menu-bar-bottom {
+            width: 36px;
+        }
+    }
+}
+
+// Mobile nav container/drawer
+.mobile-nav {
+    background-color: $primary;
+    color: $light;
+    display: none;
+    flex-direction: column;
+    inset: 0;
+    justify-content: space-between;
+    opacity: 0;
+    padding: 2.25rem;
+    position: fixed;
+    z-index: 3;
+    
+    @include tablet {
+        display: none !important;
+    }
+
+    // Links container
+    ul {
+        list-style: none;
+        margin-top: 6.25rem;
+
+        // Link container
+        li {
+            opacity: 0;
+            transform: translateX(2.5rem);
+
+            // Link
+            a {
+                @include text-nav-link-mobile {
+                    color: $light;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+                
+                display: block;
+
+                // Link divider
+                .nav-mobile-link-divider {
+                    background-color: $light;
+                    height: 1px;
+                    margin: 1rem 0;
+                    width: clamp(14.5rem, 4.353rem + 45.098vw, 26rem);
+                }
+            }
+        }
+    }
+
+    // Footer icon
+    .nav-mobile-footer-icon-container {
+        opacity: 0;
+        width: 6.25rem;
+    
+        .nav-footer-icon {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+}
