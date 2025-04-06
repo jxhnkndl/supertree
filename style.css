@@ -109,10 +109,10 @@ section {
   gap: 1rem;
   margin-bottom: clamp(2.5rem, 1.9rem + 2vw, 3.5rem);
 }
-.section-heading-container .section-heading-icon {
+.section-heading-container img {
   width: clamp(3rem, 2.511rem + 2.174vw, 4.25rem);
 }
-.section-heading-container .section-heading {
+.section-heading-container h2 {
   color: #F5FCFF;
   font-family: "Raleway", sans-serif;
   font-size: clamp(1.5rem, 1.109rem + 1.739vw, 2.5rem);
@@ -355,7 +355,6 @@ License: MIT
   display: flex;
   height: 100vh;
   justify-content: center;
-  position: relative;
 }
 @media (min-width: 48rem) {
   .hero-section {
@@ -456,6 +455,19 @@ License: MIT
   .headline-container .headline {
     max-width: 50rem;
   }
+}
+
+/* 
+Theme Name: Supertree
+Description: Richmond, Virginia's premiere 90s alternative rock cover band
+Version: 1.0.0
+Tags: alternative, rock, 90s, nineties, grunge, cover band, band
+Author: J.K. Royston
+Author URI: https://www.jkroyston.com
+License: MIT
+*/
+.media-section {
+  background-color: rgba(157, 220, 248, 0.1019607843);
 }
 
 /* 
