@@ -1,0 +1,23 @@
+@use 'colors' as *;
+@use 'media-queries' as *;
+@use 'typography' as *;
+
+// Footer
+footer {
+    padding: 8rem 0 4rem 0;
+}
+
+.footer-content {
+    p {
+        @include text-label;
+
+        &:last-of-type {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .social-icons-container {
+        display: flex;
+        gap: 1rem;
+    }
+}
