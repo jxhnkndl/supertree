@@ -7,7 +7,23 @@ Author: J.K. Royston
 Author URI: https://www.jkroyston.com
 License: MIT
 */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("./assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+}
+/* 
+Theme Name: Supertree
+Description: Richmond, Virginia's premiere 90s alternative rock cover band
+Version: 1.0.0
+Tags: alternative, rock, 90s, nineties, grunge, cover band, band
+Author: J.K. Royston
+Author URI: https://www.jkroyston.com
+License: MIT
+*/
 *,
 *::after,
 *::before {
@@ -78,6 +94,15 @@ section {
   position: relative;
 }
 
+.side-padding {
+  padding: 0 clamp(1rem, 0.804rem + 0.87vw, 1.5rem);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 85.5rem;
+}
+
 .section-heading-container {
   align-items: center;
   display: flex;
@@ -96,15 +121,6 @@ section {
   text-transform: uppercase;
 }
 
-.side-padding {
-  padding: 0 clamp(1rem, 0.804rem + 0.87vw, 1.5rem);
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 85.5rem;
-}
-
 .btn {
   color: #0B1013;
   font-family: "Raleway", sans-serif;
@@ -115,6 +131,7 @@ section {
   background-color: #F17122;
   border: none;
   color: #0B1013;
+  cursor: pointer;
   text-align: center;
   transition: all 0.25s ease-in-out;
 }
@@ -130,6 +147,15 @@ section {
   }
 }
 
+/* 
+Theme Name: Supertree
+Description: Richmond, Virginia's premiere 90s alternative rock cover band
+Version: 1.0.0
+Tags: alternative, rock, 90s, nineties, grunge, cover band, band
+Author: J.K. Royston
+Author URI: https://www.jkroyston.com
+License: MIT
+*/
 .header {
   align-items: center;
   background-color: #0B1013;
@@ -154,39 +180,36 @@ section {
 }
 
 .header-logo-link {
-  text-decoration: none;
-}
-.header-logo-link .header-logo {
   color: #F5FCFF;
   font-family: "Raleway", sans-serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
+  text-decoration: none;
   align-items: center;
   display: flex;
   gap: 0.5rem;
   margin: 0 2rem 0 1.5rem;
 }
-.header-logo-link .header-logo .logo-icon {
+.header-logo-link img {
   width: 2.75rem;
 }
 
-.nav-desktop {
+.desktop-nav {
   display: none;
 }
 @media (min-width: 48rem) {
-  .nav-desktop {
+  .desktop-nav {
     display: block;
   }
 }
-.nav-desktop .nav-desktop-links {
+.desktop-nav ul {
   align-items: center;
   display: flex;
   list-style: none;
 }
-
-.nav-desktop-link-container .nav-desktop-link {
+.desktop-nav ul li a {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -199,7 +222,7 @@ section {
   padding: 0 1.25rem;
   transition: all 0.1s ease-in-out;
 }
-.nav-desktop-link-container .nav-desktop-link:hover {
+.desktop-nav ul li a:hover {
   background-color: rgba(157, 220, 248, 0.1019607843);
   color: #F17122;
 }
@@ -267,7 +290,7 @@ section {
   width: 36px;
 }
 
-.nav-mobile {
+.mobile-nav {
   background-color: #F17122;
   color: #F5FCFF;
   display: none;
@@ -280,19 +303,19 @@ section {
   z-index: 3;
 }
 @media (min-width: 48rem) {
-  .nav-mobile {
+  .mobile-nav {
     display: none !important;
   }
 }
-.nav-mobile .nav-mobile-links {
+.mobile-nav ul {
   list-style: none;
   margin-top: 6.25rem;
 }
-.nav-mobile .nav-mobile-links .nav-mobile-link-container {
+.mobile-nav ul li {
   opacity: 0;
   transform: translateX(2.5rem);
 }
-.nav-mobile .nav-mobile-links .nav-mobile-link-container .nav-mobile-link {
+.mobile-nav ul li a {
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
   font-style: normal;
@@ -303,21 +326,30 @@ section {
   text-transform: uppercase;
   display: block;
 }
-.nav-mobile .nav-mobile-links .nav-mobile-link-container .nav-mobile-link-divider {
+.mobile-nav ul li a .nav-mobile-link-divider {
   background-color: #F5FCFF;
   height: 1px;
   margin: 1rem 0;
   width: clamp(14.5rem, 4.353rem + 45.098vw, 26rem);
 }
-.nav-mobile .nav-mobile-footer-icon-container {
+.mobile-nav .nav-mobile-footer-icon-container {
   opacity: 0;
   width: 6.25rem;
 }
-.nav-mobile .nav-mobile-footer-icon-container .nav-footer-icon {
+.mobile-nav .nav-mobile-footer-icon-container .nav-footer-icon {
   object-fit: contain;
   width: 100%;
 }
 
+/* 
+Theme Name: Supertree
+Description: Richmond, Virginia's premiere 90s alternative rock cover band
+Version: 1.0.0
+Tags: alternative, rock, 90s, nineties, grunge, cover band, band
+Author: J.K. Royston
+Author URI: https://www.jkroyston.com
+License: MIT
+*/
 .hero-section {
   align-items: center;
   display: flex;
@@ -330,7 +362,8 @@ section {
     height: 90vh;
   }
 }
-.hero-section .hero-section-video-container {
+
+.hero-section-video {
   height: 100vh;
   inset: 0;
   position: absolute;
@@ -339,11 +372,12 @@ section {
   z-index: 1;
 }
 @media (min-width: 48rem) {
-  .hero-section .hero-section-video-container {
+  .hero-section-video {
     height: 90vh;
   }
 }
-.hero-section .hero-section-content-container {
+
+.hero-section-content-container {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -355,23 +389,34 @@ section {
   width: 100%;
   z-index: 2;
 }
-.hero-section .hero-section-content-container .hero-section-logo-container {
+
+.hero-section-logo-container {
   width: clamp(23rem, 16.348rem + 29.565vw, 40rem);
 }
-.hero-section .hero-section-content-container .hero-section-logo-container .hero-section-logo-img {
+.hero-section-logo-container img {
   width: 100%;
 }
-.hero-section .hero-section-content-container .cta-btn-mobile {
+
+.cta-btn-mobile {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   padding: 1.125rem 0;
   width: 100%;
 }
 @media (min-width: 30rem) {
-  .hero-section .hero-section-content-container .cta-btn-mobile {
+  .cta-btn-mobile {
     width: 80%;
   }
 }
 
+/* 
+Theme Name: Supertree
+Description: Richmond, Virginia's premiere 90s alternative rock cover band
+Version: 1.0.0
+Tags: alternative, rock, 90s, nineties, grunge, cover band, band
+Author: J.K. Royston
+Author URI: https://www.jkroyston.com
+License: MIT
+*/
 .headline-container {
   align-items: center;
   display: flex;
@@ -382,7 +427,7 @@ section {
 .headline-container .headline-icon-container {
   width: clamp(5rem, 4.413rem + 2.609vw, 6.5rem);
 }
-.headline-container .headline-icon-container .headline-icon {
+.headline-container .headline-icon-container img {
   object-fit: contain;
   width: 100%;
 }
@@ -413,54 +458,15 @@ section {
   }
 }
 
-.media-section {
-  background-color: rgba(157, 220, 248, 0.1019607843);
-}
-.media-section .media-grid-container {
-  display: grid;
-  gap: clamp(1rem, -0.05rem + 3.5vw, 2.75rem);
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-}
-@media (min-width: 30rem) {
-  .media-section .media-grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.media-section .media-grid-container .video-container {
-  margin-bottom: 2rem;
-}
-@media (min-width: 48rem) {
-  .media-section .media-grid-container .video-container {
-    margin-bottom: 1rem;
-  }
-}
-@media (min-width: 64rem) {
-  .media-section .media-grid-container .video-container {
-    margin-bottom: 0.5rem;
-  }
-}
-.media-section .media-grid-container .video-container .video-container-link {
-  display: block;
-  width: 100%;
-}
-.media-section .media-grid-container .video-container .video-container-link iframe {
-  aspect-ratio: 16/9;
-  width: 100%;
-}
-@media (min-width: 48rem) {
-  .media-section .media-grid-container .video-container .video-container-link iframe {
-    margin-bottom: 0.5rem;
-  }
-}
-.media-section .media-grid-container .video-container .video-title {
-  color: #F5FCFF;
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.875rem;
-  font-style: normal;
-  line-height: 1.5rem;
-}
-
+/* 
+Theme Name: Supertree
+Description: Richmond, Virginia's premiere 90s alternative rock cover band
+Version: 1.0.0
+Tags: alternative, rock, 90s, nineties, grunge, cover band, band
+Author: J.K. Royston
+Author URI: https://www.jkroyston.com
+License: MIT
+*/
 footer {
   padding: 8rem 0 4rem 0;
 }

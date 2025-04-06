@@ -1,0 +1,40 @@
+@use 'colors' as *;
+@use 'media-queries' as *;
+@use 'typography' as *;
+
+// Main headline
+.headline-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 1.109rem + 1.739vw, 2.5rem);
+    justify-content: center;
+
+    .headline-icon-container {
+        width: clamp(5rem, 4.413rem + 2.609vw, 6.5rem);
+
+        img {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+
+    .headline {
+        @include text-main-headline {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        @include phone {
+            max-width: 80%;
+        }
+
+        @include tablet {
+            max-width: 36rem;
+        }
+
+        @include laptop {
+            max-width: 50rem;
+        }
+    }
+}
