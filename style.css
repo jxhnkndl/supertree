@@ -470,6 +470,38 @@ License: MIT
   background-color: rgba(157, 220, 248, 0.1019607843);
 }
 
+.video-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+@media (min-width: 48rem) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.video-grid .video-container-link {
+  display: block;
+  width: 100%;
+}
+.video-grid .video-container-link iframe {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+@media (min-width: 48rem) {
+  .video-grid .video-container-link iframe {
+    margin-bottom: 0.5rem;
+  }
+}
+.video-grid .video-title {
+  color: #F5FCFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.5rem;
+}
+
 /* 
 Theme Name: Supertree
 Description: Richmond, Virginia's premiere 90s alternative rock cover band

@@ -1,0 +1,37 @@
+@use 'colors' as *;
+@use 'media-queries' as *;
+@use 'typography' as *;
+
+// Main container
+.media-section {
+    background-color: $section-bg;
+}
+
+// Videos
+.video-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .video-container-link {
+        display: block;
+        width: 100%;
+        iframe {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            
+            @include tablet {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    .video-title {
+        @include text-label;
+    }
+}
