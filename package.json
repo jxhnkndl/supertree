@@ -1,0 +1,13 @@
+{
+  "name": "supertree",
+  "version": "1.0.0",
+  "description": "Richmond Virginia’s premiere 90s alternative rock cover band",
+  "scripts": {
+    "watch": "sass --watch ./sass/main.scss style.css"
+  },
+  "author": "jxhnkndl",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.89.1"
+  }
+}
