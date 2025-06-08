@@ -1,0 +1,87 @@
+@use 'colors' as *;
+@use 'media-queries' as *;
+@use 'typography' as *;
+
+// global rules
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $dark;
+    color: $light;
+}
+
+// typography presets
+
+h1 {
+    @include text-main-headline;
+}
+
+h2 {
+    @include text-heading;
+}
+
+h3 {
+    @include text-event-date;
+}
+
+h4 {
+    @include text-event-details;
+}
+
+p {
+    @include text-body;
+}
+
+p.small-text-label {
+    @include text-label;
+}
+
+// general sections & containers
+
+section {
+    padding: clamp(3.75rem, 2.772rem + 4.348vw, 6.25rem) 0;
+    position: relative;
+}
+
+.side-padding {
+    padding: 0 clamp(1rem, 0.804rem + 0.87vw, 1.5rem);
+}
+
+// containers
+
+.container-lg {
+    margin: 0 auto;
+    max-width: 85.5rem;
+}
+
+.container-sm {
+    margin: 0 auto;
+    max-width: 40rem;
+}
+
+// general button styling
+
+.btn {
+    @include text-btn;
+    background-color: $primary;
+    border: none;
+    color: $dark;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &:active {
+        transform: scale(0.99);
+    }
+}

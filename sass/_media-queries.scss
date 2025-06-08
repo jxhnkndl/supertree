@@ -1,0 +1,27 @@
+// small
+@mixin phone {
+	@media (min-width: 30rem) {
+		@content;
+	}
+}
+
+// medium
+@mixin tablet {
+	@media (min-width: 48rem) {
+		@content;
+	}
+}
+
+// large
+@mixin laptop {
+	@media (min-width: 64rem) {
+		@content;
+	}
+}
+
+// x-large
+@mixin desktop {
+	@media (min-width: 80rem) {
+		@content;
+	}
+}
