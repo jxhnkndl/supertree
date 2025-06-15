@@ -7,7 +7,7 @@
 
 // medium
 @mixin tablet {
-	@media (min-width: 48rem) {
+	@media (min-width: 53.75rem) {
 		@content;
 	}
 }
