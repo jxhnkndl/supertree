@@ -194,7 +194,10 @@ header .header-container {
   height: 5.375rem;
   justify-content: center;
   text-decoration: none;
-  width: 10.625rem;
+  width: 10rem;
+}
+.desktop-nav .desktop-cta:hover {
+  opacity: 0.85;
 }
 
 .hero-section {

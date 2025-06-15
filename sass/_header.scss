@@ -77,6 +77,10 @@ header {
         height: 5.375rem;
         justify-content: center;
         text-decoration: none;
-        width: 10.625rem;
+        width: 10rem;
+
+        &:hover {
+            opacity: 0.85;
+        }
     }
 }
