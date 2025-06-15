@@ -24,7 +24,7 @@ h1 {
 }
 
 h2 {
-    @include text-heading;
+    @include text-section-heading;
 }
 
 h3 {
@@ -40,7 +40,7 @@ p {
 }
 
 p.small-text-label {
-    @include text-label;
+    @include text-input-label;
 }
 
 // general sections & containers
