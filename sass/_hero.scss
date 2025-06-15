@@ -1,0 +1,15 @@
+.hero-section {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative; 
+    height: 90vh;
+    width: 100%;
+
+    video {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 100%;
+    }
+}
