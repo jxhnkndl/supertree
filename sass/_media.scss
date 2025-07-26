@@ -1,3 +1,7 @@
+@use 'colors' as *;
+@use 'media-queries' as *;
+@use 'typography' as *;
+
 .media-section {
     display: flex;
     justify-content: center;
@@ -14,5 +18,87 @@
 }
 
 h1 {
+    margin: 0 auto clamp(5rem, 4.432rem + 2.273vw, 6.25rem) auto;
     max-width: 50rem;
+}
+
+.video-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    @include tablet {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .video-list {
+        order: 2;
+
+        .video {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: clamp(0.5rem, 0.273rem + 0.909vw, 1rem) 0 clamp(0.5rem, 0.273rem + 0.909vw, 1rem) 1rem;
+
+            .song-data {
+                max-width: 18.75rem;
+
+                p {
+                    text-overflow: ellipsis;
+
+                    &:first-of-type {
+                        @include text-song-title;
+                        transform: translateY(5px);
+                    }
+
+                    &:last-of-type {
+                        @include text-artist-name;
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+
+            figure {
+                cursor: pointer;
+                padding-right: 0.75rem;
+            }
+
+            &-1 {
+                background-color: $primary;
+                border-top-left-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+                border-top-right-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+            }
+
+            &-2 {
+                background-color: $tertiary;
+            }
+
+            &-3 {
+                background-color: $secondary;
+                border-bottom-left-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+                border-bottom-right-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+            }
+        }
+
+        @include tablet {
+            order: 1;
+            min-height: clamp(20rem, 16.591rem + 13.636vw, 27.5rem);
+        }
+    }
+
+    .video-player {
+        order: 1;
+
+        @include tablet {
+            order: 2;
+        }
+
+        iframe {
+            aspect-ratio: 16 / 9;
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+        }
+    }
 }

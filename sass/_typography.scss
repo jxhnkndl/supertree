@@ -126,6 +126,27 @@ $font-accent: "Raleway", sans-serif;
 	color: $dark;
 	font-family: $font-primary;
 	font-size: clamp(0.8rem, 0.039rem + 3.043vw, 1.5rem);
+	font-style: normal;
 	font-weight: 600;
+	@content;
+}
+
+// Media player song title 
+@mixin text-song-title {
+	color: $dark;
+	font-family: $font-accent;
+	text-transform: uppercase;
+	font-weight: 700;
+	@content;
+}
+
+// Media player artist name
+@mixin text-artist-name {
+	color: $dark;
+	font-family: $font-primary;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2rem;
 	@content;
 }

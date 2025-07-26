@@ -252,7 +252,7 @@ header .header-container {
   background: #F2C42D;
   background: linear-gradient(0deg, rgb(242, 196, 45) 0%, rgb(241, 112, 34) 58%);
   bottom: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
@@ -338,6 +338,7 @@ header .header-container {
   color: #0B1013;
   font-family: "Open Sans", sans-serif;
   font-size: clamp(0.8rem, 0.039rem + 3.043vw, 1.5rem);
+  font-style: normal;
   font-weight: 600;
   align-items: center;
   display: flex;
@@ -407,7 +408,88 @@ header .header-container {
 }
 
 h1 {
+  margin: 0 auto clamp(5rem, 4.432rem + 2.273vw, 6.25rem) auto;
   max-width: 50rem;
+}
+
+.video-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+@media (min-width: 53.75rem) {
+  .video-grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.video-grid .video-list {
+  order: 2;
+}
+.video-grid .video-list .video {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: clamp(0.5rem, 0.273rem + 0.909vw, 1rem) 0 clamp(0.5rem, 0.273rem + 0.909vw, 1rem) 1rem;
+}
+.video-grid .video-list .video .song-data {
+  max-width: 18.75rem;
+}
+.video-grid .video-list .video .song-data p {
+  text-overflow: ellipsis;
+}
+.video-grid .video-list .video .song-data p:first-of-type {
+  color: #0B1013;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  transform: translateY(5px);
+}
+.video-grid .video-list .video .song-data p:last-of-type {
+  color: #0B1013;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  transform: translateY(-5px);
+}
+.video-grid .video-list .video figure {
+  cursor: pointer;
+  padding-right: 0.75rem;
+}
+.video-grid .video-list .video-1 {
+  background-color: #F17122;
+  border-top-left-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+  border-top-right-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+}
+.video-grid .video-list .video-2 {
+  background-color: #F2C42D;
+}
+.video-grid .video-list .video-3 {
+  background-color: #9DDCF8;
+  border-bottom-left-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+  border-bottom-right-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+}
+@media (min-width: 53.75rem) {
+  .video-grid .video-list {
+    order: 1;
+    min-height: clamp(20rem, 16.591rem + 13.636vw, 27.5rem);
+  }
+}
+.video-grid .video-player {
+  order: 1;
+}
+@media (min-width: 53.75rem) {
+  .video-grid .video-player {
+    order: 2;
+  }
+}
+.video-grid .video-player iframe {
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
