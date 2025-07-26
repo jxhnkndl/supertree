@@ -73,8 +73,8 @@ h1 {
 
             &-1 {
                 background-color: $primary;
-                border-top-left-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
-                border-top-right-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+                border-top-left-radius: 0.625rem;
+                border-top-right-radius: 0.625rem;
             }
 
             &-2 {
@@ -83,8 +83,8 @@ h1 {
 
             &-3 {
                 background-color: $secondary;
-                border-bottom-left-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
-                border-bottom-right-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+                border-bottom-left-radius: 0.625rem;
+                border-bottom-right-radius: 0.625rem;
             }
         }
 
@@ -96,6 +96,14 @@ h1 {
 
     .video-player {
         order: 1;
+
+        &.hide-video {
+            display: none;
+        }
+
+        &.show-video {
+            display: block;
+        }
 
         @include tablet {
             order: 2;

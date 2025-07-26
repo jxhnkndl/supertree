@@ -466,16 +466,16 @@ h1 {
 }
 .video-grid .video-list .video-1 {
   background-color: #F17122;
-  border-top-left-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
-  border-top-right-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
 }
 .video-grid .video-list .video-2 {
   background-color: #F2C42D;
 }
 .video-grid .video-list .video-3 {
   background-color: #9DDCF8;
-  border-bottom-left-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
-  border-bottom-right-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
 }
 @media (min-width: 53.75rem) {
   .video-grid .video-list {
@@ -485,6 +485,12 @@ h1 {
 }
 .video-grid .video-player {
   order: 1;
+}
+.video-grid .video-player.hide-video {
+  display: none;
+}
+.video-grid .video-player.show-video {
+  display: block;
 }
 @media (min-width: 53.75rem) {
   .video-grid .video-player {
