@@ -118,3 +118,12 @@ $font-accent: "Raleway", sans-serif;
 	font-weight: 400;
 	@content;
 }
+
+// Next upcoming concert banner
+@mixin text-next-concert {
+	color: $dark;
+	font-family: $font-primary;
+	font-size: clamp(0.8rem, 0.039rem + 3.043vw, 1.5rem);
+	font-weight: 600;
+	@content;
+}
