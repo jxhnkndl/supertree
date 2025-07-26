@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Raleway";
-  src: url("./assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+  src: url("./fonts/Raleway-VariableFont_wght.ttf") format("truetype");
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("./assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("./fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
 }
 *,
 *::after,
@@ -149,7 +149,7 @@ header .header-container {
   width: 3rem;
 }
 
-.hamburger-icon {
+.hamburger-menu {
   align-items: center;
   display: flex;
   height: 100%;
@@ -158,11 +158,11 @@ header .header-container {
   width: 40px;
 }
 @media (min-width: 53.75rem) {
-  .hamburger-icon {
+  .hamburger-menu {
     display: none;
   }
 }
-.hamburger-icon .menu-bars {
+.hamburger-menu .menu-bars {
   align-items: flex-end;
   display: flex;
   flex-direction: column;
@@ -170,17 +170,17 @@ header .header-container {
   justify-content: center;
   height: 100%;
 }
-.hamburger-icon .menu-bars .menu-bar {
+.hamburger-menu .menu-bars .menu-bar {
   background-color: #F5FCFF;
   height: 2px;
 }
-.hamburger-icon .menu-bars .menu-bar-top {
+.hamburger-menu .menu-bars .menu-bar-top {
   width: 40px;
 }
-.hamburger-icon .menu-bars .menu-bar-middle {
+.hamburger-menu .menu-bars .menu-bar-middle {
   width: 40px;
 }
-.hamburger-icon .menu-bars .menu-bar-bottom {
+.hamburger-menu .menu-bars .menu-bar-bottom {
   width: 30px;
 }
 
@@ -255,8 +255,7 @@ header .header-container {
   top: 0;
   width: 100%;
   z-index: 3;
-  opacity: 1;
-  transform: translate(100%);
+  opacity: 0;
 }
 @media (min-width: 30rem) {
   .mobile-nav {

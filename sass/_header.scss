@@ -37,7 +37,7 @@ header {
     }
 }
 
-.hamburger-icon {
+.hamburger-menu {
     align-items: center;
     display: flex;
     height: 100%;
@@ -138,8 +138,7 @@ header {
     z-index: 3;
     
     // Dev/Transition properties
-    opacity: 1;
-    transform: translate(100%);
+    opacity: 0;
 
     @include phone {
         width: 22rem;
