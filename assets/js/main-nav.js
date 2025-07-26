@@ -15,15 +15,24 @@ const openNav = () => {
     });
 
     gsap.to('.menu-bar-top', {
-        backgroundColor: '#0B1013'
+        duration: 0.25,
+        backgroundColor: '#0B1013',
+        rotation: 45,
+        y: 10
     });
 
     gsap.to('.menu-bar-middle', {
-        backgroundColor: '#0B1013'
+        duration: 0.25,
+        backgroundColor: '#0B1013',
+        opacity: 0
     });
 
     gsap.to('.menu-bar-bottom', {
-        backgroundColor: '#0B1013'
+        duration: 0.25,
+        backgroundColor: '#0B1013',
+        rotation: -45,
+        width: '40px',
+        y: -10
     });
 }
 
@@ -34,15 +43,24 @@ const closeNav = () => {
     });
 
     gsap.to('.menu-bar-top', {
-        backgroundColor: '#F5FCFF'
+        duration: 0.25,
+        backgroundColor: '#F5FCFF',
+        rotation: 0,
+        y: 0
     });
 
     gsap.to('.menu-bar-middle', {
-        backgroundColor: '#F5FCFF'
+        duration: 0.25,
+        backgroundColor: '#F5FCFF',
+        opacity: 1
     });
 
     gsap.to('.menu-bar-bottom', {
-        backgroundColor: '#F5FCFF'
+        duration: 0.25,
+        backgroundColor: '#F5FCFF',
+        rotation: 0,
+        width: '30px',
+        y: 0
     });
 
     setTimeout(() => {
