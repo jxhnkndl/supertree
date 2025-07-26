@@ -307,13 +307,13 @@ header .header-container {
   aspect-ratio: 16/9;
   overflow: hidden;
   position: relative;
-  height: 90vh;
+  height: 95vh;
   width: 100%;
 }
 .hero-section video {
   border-bottom-left-radius: clamp(6.25rem, -14.13rem + 81.522vw, 25rem);
   display: block;
-  height: 82vh;
+  height: 87vh;
   object-fit: cover;
   object-position: 50% 50%;
   width: 100%;
@@ -359,7 +359,7 @@ header .header-container {
   background-color: #0B1013;
   border-bottom-left-radius: clamp(6.25rem, -14.13rem + 81.522vw, 25rem);
   bottom: 0;
-  height: 82vh;
+  height: 87vh;
   left: 0;
   opacity: 0.55;
   position: absolute;
@@ -367,23 +367,25 @@ header .header-container {
   top: 0;
   z-index: 2;
 }
-.hero-section .hero-overlay {
-  align-items: flex-start;
+.hero-section .hero-logo-container {
+  align-items: center;
+  border-bottom-left-radius: clamp(6.25rem, -14.13rem + 81.522vw, 25rem);
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  height: 87vh;
+  justify-content: center;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 2;
+  z-index: 4;
 }
-.hero-section .hero-overlay figure {
-  align-items: flex-end;
-  display: flex;
+.hero-section .hero-logo-container figure {
+  transform: translateY(2.75rem);
+  width: clamp(22.75rem, 12.636rem + 40.455vw, 45rem);
 }
-.hero-section .hero-overlay figure img {
+.hero-section .hero-logo-container figure img {
   width: 100%;
 }
 
