@@ -123,7 +123,7 @@ header {
 header .header-container {
   align-items: center;
   display: flex;
-  height: 5.375rem;
+  height: clamp(3.75rem, 2.391rem + 5.435vw, 5rem);
   justify-content: space-between;
 }
 
@@ -147,6 +147,41 @@ header .header-container {
 }
 .logo-container img {
   width: 3rem;
+}
+
+.hamburger-icon {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding-right: 2.25rem;
+  width: 40px;
+}
+@media (min-width: 53.75rem) {
+  .hamburger-icon {
+    display: none;
+  }
+}
+.hamburger-icon .menu-bars {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  height: 100%;
+}
+.hamburger-icon .menu-bars .menu-bar {
+  background-color: #F5FCFF;
+  height: 2px;
+}
+.hamburger-icon .menu-bars .menu-bar-top {
+  width: 40px;
+}
+.hamburger-icon .menu-bars .menu-bar-middle {
+  width: 40px;
+}
+.hamburger-icon .menu-bars .menu-bar-bottom {
+  width: 30px;
 }
 
 .desktop-nav {
@@ -215,12 +250,13 @@ header .header-container {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  opacity: 1;
   position: fixed;
   right: 0;
   top: 0;
   width: 100%;
   z-index: 3;
+  opacity: 1;
+  transform: translate(100%);
 }
 @media (min-width: 30rem) {
   .mobile-nav {

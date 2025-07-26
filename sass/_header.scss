@@ -14,7 +14,7 @@ header {
     .header-container {
         align-items: center;
         display: flex;
-        height: 5.375rem;
+        height: clamp(3.75rem, 2.391rem + 5.435vw, 5rem);
         justify-content: space-between;
     }
 }
@@ -35,6 +35,38 @@ header {
     img {
         width: 3rem;
     }
+}
+
+.hamburger-icon {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding-right: 2.25rem;
+    width: 40px;
+
+    @include tablet {
+        display: none;
+    }
+
+    .menu-bars {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: center;
+        height: 100%;
+
+        .menu-bar {
+            background-color: $light;
+            height: 2px;
+
+            &-top { width: 40px; }
+            &-middle { width: 40px; }
+            &-bottom { width: 30px; }
+        }
+    }
+
 }
 
 .desktop-nav {
@@ -99,14 +131,15 @@ header {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    opacity: 1;
     position: fixed;
     right: 0;
     top: 0;
     width: 100%;
     z-index: 3;
-
-
+    
+    // Dev/Transition properties
+    opacity: 1;
+    transform: translate(100%);
 
     @include phone {
         width: 22rem;
