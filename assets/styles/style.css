@@ -458,6 +458,12 @@ h1 {
   cursor: pointer;
   padding-right: 0.75rem;
 }
+@media (min-width: 53.75rem) {
+  .video-grid .video-list .video figure:active {
+    transform: scale(0.95);
+    transition: all 0.25 ease-in-out;
+  }
+}
 .video-grid .video-list .video-1 {
   background-color: #F17122;
   border-top-left-radius: clamp(0.625rem, 0.341rem + 1.136vw, 1.25rem);
