@@ -81,7 +81,7 @@ $font-accent: "Raleway", sans-serif;
 // Mobile nav links
 @mixin text-nav-link-mobile {
 	font-family: $font-accent;
-	font-size: 2rem;
+	font-size: 1.125rem;
 	font-style: normal;
 	font-weight: 600;
 	letter-spacing: 0.5px;

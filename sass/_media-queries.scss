@@ -1,3 +1,10 @@
+// micro
+@mixin micro {
+	@media (min-width: 25rem) {
+		@content;
+	}
+}
+
 // small
 @mixin phone {
 	@media (min-width: 30rem) {
