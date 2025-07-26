@@ -15,7 +15,8 @@
 }
 
 body {
-  background-color: #0B1013;
+  background: #0B1013;
+  background: linear-gradient(90deg, rgb(11, 16, 19) 0%, rgb(36, 70, 90) 86%);
   color: #F5FCFF;
 }
 
@@ -27,6 +28,8 @@ h1 {
   font-weight: 500;
   letter-spacing: 0.5px;
   line-height: clamp(2rem, 1.266rem + 3.261vw, 3.875rem);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -387,6 +390,24 @@ header .header-container {
 }
 .hero-section .hero-logo-container figure img {
   width: 100%;
+}
+
+.media-section {
+  display: flex;
+  justify-content: center;
+  padding: clamp(5rem, 3.864rem + 4.545vw, 7.5rem) 0;
+}
+
+.media-header-icon {
+  margin: 0 auto 1.5rem auto;
+  width: clamp(5rem, 3.864rem + 4.545vw, 7.5rem);
+}
+.media-header-icon img {
+  width: 100%;
+}
+
+h1 {
+  max-width: 50rem;
 }
 
 /*# sourceMappingURL=style.css.map */

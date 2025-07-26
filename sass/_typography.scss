@@ -24,6 +24,8 @@ $font-accent: "Raleway", sans-serif;
 	font-weight: 500;
 	letter-spacing: 0.5px;
 	line-height: clamp(2rem, 1.266rem + 3.261vw, 3.875rem);
+	text-align: center;
+	text-transform: uppercase;
 	@content;
 }
 

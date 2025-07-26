@@ -1,0 +1,18 @@
+.media-section {
+    display: flex;
+    justify-content: center;
+    padding: clamp(5rem, 3.864rem + 4.545vw, 7.5rem) 0;
+}
+
+.media-header-icon {
+    margin: 0 auto 1.5rem auto;
+    width: clamp(5rem, 3.864rem + 4.545vw, 7.5rem);
+
+    img { 
+        width: 100% 
+    };
+}
+
+h1 {
+    max-width: 50rem;
+}

@@ -13,7 +13,8 @@
 }
 
 body {
-    background-color: $dark;
+    background: #0B1013;
+    background: linear-gradient(90deg,rgba(11, 16, 19, 1) 0%, rgba(36, 70, 90, 1) 86%);
     color: $light;
 }
 
