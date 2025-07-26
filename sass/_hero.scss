@@ -1,3 +1,5 @@
+@use 'colors' as *;
+
 .hero-section {
     aspect-ratio: 16 / 9;
     overflow: hidden;
@@ -6,6 +8,7 @@
     width: 100%;
 
     video {
+        border-bottom-left-radius: 400px;
         display: block;
         height: 100%;
         object-fit: cover;
@@ -13,8 +16,19 @@
         width: 100%;
     }
 
+    .opacity-overlay {
+        background-color: $dark;
+        bottom: 0;
+        left: 0;
+        opacity: 0.55;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+
     .hero-overlay {
-        align-items: center;
+        align-items: flex-start;
         bottom: 0;
         display: flex;
         flex-direction: column;
@@ -23,6 +37,7 @@
         position: absolute;
         right: 0;
         top: 0;
+        z-index: 2;
 
         figure {
             align-items: flex-end;
