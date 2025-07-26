@@ -106,8 +106,10 @@ header {
     width: 100%;
     z-index: 3;
 
+
+
     @include phone {
-        width: 65%;
+        width: 22rem;
     }
 
     @include tablet {
@@ -118,17 +120,22 @@ header {
     .mobile-nav-container {
         display: flex;
         flex-direction: column;
-        padding: 5rem 0 0 3rem;
-        max-width: 17.5rem;
+        padding: 5.75rem 0 0 0;
+
 
         .mobile-nav-link-container {
             @include text-nav-link-mobile;
             border-bottom: 1px solid $dark;
             list-style: none;
-            padding: 0.75rem 0;
+            padding: 1rem 3rem;
+
+            &:first-of-type {
+                border-top: 1px solid $dark;
+            }
 
             a {
                 color: $dark;
+                font-weight: 700;
                 text-decoration: none;
                 text-transform: uppercase;
             }
@@ -143,15 +150,4 @@ header {
             width: 100%;
         }
     }
-}
-
-.opacity-overlay {
-    background-color: $dark;
-    bottom: 0;
-    left: 0;
-    opacity: 0.75;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
 }
