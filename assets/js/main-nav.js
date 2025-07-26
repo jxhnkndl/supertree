@@ -6,7 +6,6 @@ const menuBarMiddleEl = document.querySelector('.menu-bar-middle');
 const menuBarBottomEl = document.querySelector('.menu-bar-bottom');
 
 const openNav = () => {
-    console.log("HI")
     navEl.style.display = 'flex';
 
     gsap.to('.mobile-nav', {
