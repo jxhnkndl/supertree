@@ -428,7 +428,7 @@ h1 {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: clamp(0.5rem, 0.273rem + 0.909vw, 1rem) 0 clamp(0.5rem, 0.273rem + 0.909vw, 1rem) 1rem;
+  padding: clamp(0.25rem, -0.022rem + 1.087vw, 0.5rem) 0 clamp(0.25rem, -0.022rem + 1.087vw, 0.5rem) 1rem;
 }
 .video-grid .video-list .video .song-data {
   max-width: 18.75rem;
