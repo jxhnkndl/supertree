@@ -13,7 +13,7 @@ const videos = [
     {
         artist: "Plush",
         title: "Stone Temple Pilots",
-        src: 'https://www.youtube.com/embed/jeyIPKoDyqk?si=-cLS7OWQhyZPGjHl'
+        src: 'https://www.youtube.com/embed/jeyIPKoDyqk?si=Fgu8sZO9fa49E5qW'
     },
     {
         artist: "Even Flow",
