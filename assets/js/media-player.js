@@ -25,19 +25,25 @@ const videos = [
 ];
 
 videoPlayBtn1.addEventListener('click', () => {
-    videoPlayer1.classList.replace('hide-video', 'show-video');
-    videoPlayer2.classList.replace('show-video', 'hide-video');
-    videoPlayer3.classList.replace('show-video', 'hide-video');
+    const videoID = videos[0].src;
+    videoPlayer1.attributes.src = videoID;
+    // videoPlayer1.classList.replace('hide-video', 'show-video');
+    // videoPlayer2.classList.replace('show-video', 'hide-video');
+    // videoPlayer3.classList.replace('show-video', 'hide-video');
 });
 
 videoPlayBtn2.addEventListener('click', () => {
-    videoPlayer1.classList.replace('show-video', 'hide-video');
-    videoPlayer2.classList.replace('hide-video', 'show-video');
-    videoPlayer3.classList.replace('show-video', 'hide-video');
+    const videoID = videos[1].src;
+    videoPlayer1.attributes.src = videoID;
+    // videoPlayer1.classList.replace('show-video', 'hide-video');
+    // videoPlayer2.classList.replace('hide-video', 'show-video');
+    // videoPlayer3.classList.replace('show-video', 'hide-video');
 });
 
 videoPlayBtn3.addEventListener('click', () => {
-    videoPlayer1.classList.replace('show-video', 'hide-video');
-    videoPlayer2.classList.replace('show-video', 'hide-video');
-    videoPlayer3.classList.replace('hide-video', 'show-video'); 
+    const videoID = videos[2].src;
+    videoPlayer1.attributes.src = videoID;
+    // videoPlayer1.classList.replace('show-video', 'hide-video');
+    // videoPlayer2.classList.replace('show-video', 'hide-video');
+    // videoPlayer3.classList.replace('hide-video', 'show-video'); 
 });
