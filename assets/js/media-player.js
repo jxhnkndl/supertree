@@ -34,6 +34,6 @@ videoPlayBtn2.addEventListener('click', () => {
     toggleVideo(1)
 });
 
-videoPlayBtn2.addEventListener('click', () => {
+videoPlayBtn3.addEventListener('click', () => {
     toggleVideo(2)
 });
