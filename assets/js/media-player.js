@@ -1,7 +1,5 @@
 
-const videoPlayer1 = document.querySelector('.video-player-1');
-const videoPlayer2 = document.querySelector('.video-player-2');
-const videoPlayer3 = document.querySelector('.video-player-3');
+const videoPlayer = document.querySelector('iframe');
 const videoPlayBtn1 = document.querySelector('.play-icon-1');
 const videoPlayBtn2 = document.querySelector('.play-icon-2');
 const videoPlayBtn3 = document.querySelector('.play-icon-3');
@@ -24,26 +22,18 @@ const videos = [
     },
 ];
 
+const toggleVideo = (index) => {
+    videoPlayer.src = videos[index].src;
+}
+
 videoPlayBtn1.addEventListener('click', () => {
-    const videoID = videos[0].src;
-    videoPlayer1.attributes.src = videoID;
-    // videoPlayer1.classList.replace('hide-video', 'show-video');
-    // videoPlayer2.classList.replace('show-video', 'hide-video');
-    // videoPlayer3.classList.replace('show-video', 'hide-video');
+    toggleVideo(0)
 });
 
 videoPlayBtn2.addEventListener('click', () => {
-    const videoID = videos[1].src;
-    videoPlayer1.attributes.src = videoID;
-    // videoPlayer1.classList.replace('show-video', 'hide-video');
-    // videoPlayer2.classList.replace('hide-video', 'show-video');
-    // videoPlayer3.classList.replace('show-video', 'hide-video');
+    toggleVideo(1)
 });
 
-videoPlayBtn3.addEventListener('click', () => {
-    const videoID = videos[2].src;
-    videoPlayer1.attributes.src = videoID;
-    // videoPlayer1.classList.replace('show-video', 'hide-video');
-    // videoPlayer2.classList.replace('show-video', 'hide-video');
-    // videoPlayer3.classList.replace('hide-video', 'show-video'); 
+videoPlayBtn2.addEventListener('click', () => {
+    toggleVideo(2)
 });

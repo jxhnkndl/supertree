@@ -483,21 +483,21 @@ h1 {
     min-height: clamp(20rem, 16.591rem + 13.636vw, 27.5rem);
   }
 }
-.video-grid .video-player {
+.video-grid .video-player-container {
   order: 1;
 }
-.video-grid .video-player.hide-video {
+.video-grid .video-player-container.hide-video {
   display: none;
 }
-.video-grid .video-player.show-video {
+.video-grid .video-player-container.show-video {
   display: block;
 }
 @media (min-width: 53.75rem) {
-  .video-grid .video-player {
+  .video-grid .video-player-container {
     order: 2;
   }
 }
-.video-grid .video-player iframe {
+.video-grid .video-player-container .video-player {
   aspect-ratio: 16/9;
   border-radius: 10px;
   height: 100%;

@@ -94,7 +94,7 @@ h1 {
         }
     }
 
-    .video-player {
+    .video-player-container {
         order: 1;
 
         &.hide-video {
@@ -109,7 +109,7 @@ h1 {
             order: 2;
         }
 
-        iframe {
+        .video-player {
             aspect-ratio: 16 / 9;
             border-radius: 10px;
             height: 100%;
