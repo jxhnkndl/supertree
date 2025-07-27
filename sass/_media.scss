@@ -3,8 +3,6 @@
 @use 'typography' as *;
 
 .media-section {
-    display: flex;
-    justify-content: center;
     padding: clamp(5rem, 3.864rem + 4.545vw, 7.5rem) 0;
 }
 
